@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ChatGPT</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>What can I help with?</h1>
+
+    <div class="input-block">
+      <form action="{{ url_for('dashboard') }}" method="POST" enctype="multipart/form-data" class="input-form">
+        <div class="input-wrapper">
+          <input type="file" name="file" id="fileInput" accept=".pdf" hidden />
+          <label for="fileInput" class="upload-btn" title="Upload File">📎</label>
+          <input type="text" name="query" placeholder="Ask a question..." required />
+          <button type="submit" class="submit-btn">➤</button>
+        </div>
+      </form>
+      {% if uploaded_filename %}
+        <p class="uploaded-file">Uploaded: <strong>{{ uploaded_filename }}</strong></p>
+      {% endif %}
+    </div>
+
+    {% if answer %}
+      <div class="response-box">
+        <h3>Answer:</h3>
+        <p>{{ answer }}</p>
+      </div>
+    {% elif error %}
+      <div class="response-box">
+        <p>{{ error }}</p>
+      </div>
+    {% endif %}
+    <script>
+    function onFileSelected(event) {
+      if (event.target.files.length > 0) {
+        const file = event.target.files[0];
+        alert("File uploaded successfully!");
+        const validFileTypes = ['application/pdf'];
+        if (!validFileTypes.includes(file.type)) {
+          alert("Only PDF files are supported. Please select a valid PDF file.");
+          event.target.value = ''; 
+        }
+      }
+    }
+  </script>
+    <br>
+    <br>
+    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+  </div>
+  <script>
+    function onFileSelected(event) {
+      if (event.target.files.length > 0) {
+        const file = event.target.files[0];
+        alert("File uploaded successfully!");
+        const validFileTypes = ['application/pdf'];
+        if (!validFileTypes.includes(file.type)) {
+          alert("Only PDF files are supported. Please select a valid PDF file.");
+          event.target.value = ''; 
+        }
+      }
+    }
+  </script>
+</body>
+</html>

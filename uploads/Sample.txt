@@ -1,0 +1,22 @@
+This complete python tutorial explains, how to create a Registration form using Python Tkinter and a login page in python Tkinter with database sqlite3. Also, I have explained how to validate form fields in the registration form in Python Tkinter. I hope, you will like this, registration form in Python using Tkinter example.
+
+All the data will be stored and fetched using the SQLite3 database. This is a complete project on the registration form in python with database, that can be used to add registration & login screens to any desktop application in Python.
+
+
+Table of Contents
+Login and Registration form in Python using Tkinter Overview
+The Login and Registration forms are created using Python library ‘Tkinter.’ [Read more about Python Tkinter]
+Tkinter allows creating GUI-based applications and is rich with helpful widgets.
+For the database, we have used SQLite3 which comes pre-installed with python. It is a lighter version of SQL and can hold 281 terabytes of data.
+We have added validation on all the Entry Fields in the project that means it is mandatory to provide all the information. Not doing so will prompt an error message.
+Exception handlers are used to avoid breaking the program also you will see the error using a message box.
+Names of all the countries in the ‘North America‘ continent are displayed in the dropdown. If you want to add more countries, simply replace countries.txt with your text file but make sure to change the name in the code at line 129. An easier way would be to edit the data of inside countries.txt.
+Here is the description of widgets used in the program. Also, we have a dedicated section for each widget used in the project and we added a link in front of each.
+
+Widget Name	Widget Overview
+Python Tkinter Frame	We have used two frames with the name left frame & right frame. they position the logging and registration page. The geometry manager used to position frames is Place.
+Tkinter Label	The Label widget is used to display text on the application screen. All the text on the screen like ‘Enter Email’, ‘Enter Name’, etc are added using the Label widget.
+Entry widgets	Entry boxes provide white space to the user and the user can type the details inside it. It is one of the most important widgets used in any application.
+Python Tkinter Radiobutton	Radiobutton widget is used to provide a single choice to the users. In the application. the user can choose only one gender at a time.
+OptionMenu	OptionMenu is used to display the dropdown. It is used to display the list of countries in the application. Learn more about OptionMenu.
+Button	Buttons are used to perform an action when clicked. In this application, we have used two buttons with the names as Login and Register.
