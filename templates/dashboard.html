@@ -8,7 +8,6 @@
 <body>
   <div class="dashboard-container">
     <h1>What can I help with?</h1>
-
     <div class="input-block">
       <form action="{{ url_for('dashboard') }}" method="POST" enctype="multipart/form-data" class="input-form">
         <div class="input-wrapper">
@@ -33,35 +32,9 @@
         <p>{{ error }}</p>
       </div>
     {% endif %}
-    <script>
-    function onFileSelected(event) {
-      if (event.target.files.length > 0) {
-        const file = event.target.files[0];
-        alert("File uploaded successfully!");
-        const validFileTypes = ['application/pdf'];
-        if (!validFileTypes.includes(file.type)) {
-          alert("Only PDF files are supported. Please select a valid PDF file.");
-          event.target.value = ''; 
-        }
-      }
-    }
-  </script>
     <br>
     <br>
     <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
   </div>
-  <script>
-    function onFileSelected(event) {
-      if (event.target.files.length > 0) {
-        const file = event.target.files[0];
-        alert("File uploaded successfully!");
-        const validFileTypes = ['application/pdf'];
-        if (!validFileTypes.includes(file.type)) {
-          alert("Only PDF files are supported. Please select a valid PDF file.");
-          event.target.value = ''; 
-        }
-      }
-    }
-  </script>
 </body>
 </html>
