@@ -50,7 +50,7 @@ def get_answer(query, chunks):
     response = co.chat(
         message=f"""
         System Prompt:
-        You are RAGSTA. A file-based assistant that answers user questions based on uploaded documents.
+        You are ChatGPT like Assistant, A file-based assistant that answers user questions based on uploaded documents.
         User Query: {query}
         Relevant Context:
         {context}
