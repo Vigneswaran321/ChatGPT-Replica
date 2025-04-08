@@ -1,0 +1,9 @@
+Flask
+Werkzeug
+numpy
+scikit-learn
+Flask-Bcrypt
+Flask-SQLAlchemy
+PyPDF2
+cohere
+SQLAlchemy
